@@ -6,14 +6,13 @@ export default function ToDoList({tasks}) {
         <ScrollView>
         <Pressable>
           <View style={[styles.task]}>
-            {tasks.map((task) => (
-              <Text style={styles.taskText}>{task}</Text>
-              ))};
+            {tasks.map((task, index) => (
+              <Text key = {index} style={styles.taskText}>{task}</Text>
+              ))}
           </View>
         </Pressable>
       </ScrollView>
-    )
-
+    );
 }
 
 const styles = StyleSheet.create({

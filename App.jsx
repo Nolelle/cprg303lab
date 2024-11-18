@@ -16,6 +16,10 @@ import TodoList from './ToDoList';
 export default function App() {
   const Stack = createStackNavigator();
 
+  const addTask = task => {
+    setTasks([...tasks, task]);
+  };
+
   return (
     <NavigationContainer>
       <SafeAreaView>
